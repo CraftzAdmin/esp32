@@ -23,6 +23,8 @@ This sensor is more adequate for indoors / shades, due to it´s limited range (1
 
 ## Sensor Photos
 <img src="https://github.com/CraftzAdmin/esp32/blob/96055247139d4a98f6111b92b2918d85521470b6/Sensors/photos/TEMT600_FRONT.jpg" width="300" height="300"> <img src="https://github.com/CraftzAdmin/esp32/blob/96055247139d4a98f6111b92b2918d85521470b6/Sensors/photos/TEMT6000_back.jpg" width="300" height="300">
+<img src="https://github.com/CraftzAdmin/esp32/blob/2be047704930a3eb39e4b08d5c9615c42d0e86c2/Sensors/photos/TEMT6000_schematic.jpg" width="200" height="300">
+
 
 ## PINS - ESP32 DEVKIT-V1 (30 PIN)
 
