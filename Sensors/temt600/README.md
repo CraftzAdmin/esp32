@@ -30,7 +30,7 @@ ESP32 DEVKIT V1 ADC1 Pins -  `GPIO32` `GPIO33` `GPIO34` `GPIO35` `GPIO36` `GPIO3
 | V (VCC) | `3.3V` | 3.3V - If possible use external supply |
 | G (GND) | `GND`| Common GND |
 
-## Basic Code for testing purposes (ARDUINO IDE)
+## Basic Code (ARDUINO IDE)
 
 ```C++ 
 
