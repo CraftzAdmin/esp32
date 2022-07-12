@@ -40,6 +40,9 @@ ESP32 DEVKIT V1 ADC1 Pins -  `GPIO32` `GPIO33` `GPIO34` `GPIO35` `GPIO36` `GPIO3
 | V (VCC) | `3.3V` | 3.3V - If possible use external supply |
 | G (GND) | `GND`| Common GND |
 
+## Schematics
+<img src="https://github.com/CraftzAdmin/esp32/blob/2be047704930a3eb39e4b08d5c9615c42d0e86c2/Sensors/photos/TEMT6000_schematic.jpg" width="200" height="300">
+
 ## Required Libraries
 
 No required libraries.
