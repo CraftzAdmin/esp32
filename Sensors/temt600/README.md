@@ -152,7 +152,7 @@ void loop() {
  
 5. Finally we will convert the readings to LUX. In the datasheet you will find the relationship between lux and current. From that chart you can calculate the formula. Then you just need to convert the voltage measured to a current measurement. We will use as in the datasheet a series resistor is 10,000 Ohms so the current should be voltage / 10000. The formula is y = 1/2(x) + 0.
 
-    This means that lux = 2 * microamps. In the end we will delay 1000 (1 second) to give enought time for the reading. 
+    This means that lux = 2 * microamps. In the end we will delay 1000 (1 second) to give enought time for the reading. This should give you a value between **0 and 1000 lux.**
 
 ```C++
  //Conversions from reading to LUX
