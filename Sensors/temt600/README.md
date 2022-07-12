@@ -15,6 +15,7 @@ It help you to to detect the light density and reflect the analog voltage signal
 | Supply Voltage|DC 3.3V ~ 5.5V|
 | Half sensitivity wide angle ϕ | +/-60° degrees|
 |Current consumption| 20 mA|
+| Dimensions | 30 x 22 mm |
 
 ## Considerations
 
