@@ -1,4 +1,4 @@
-# TEMT6000
+# TEMT6000 (Breakout Board)
 
 TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible light much like the human eye and has peak sensitivity at 570 nm.
 
