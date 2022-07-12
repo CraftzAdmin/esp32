@@ -2,7 +2,9 @@
 
 TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible light much like the human eye and has peak sensitivity at 570 nm. The breakout board contains a TEMT6000 in the form of a phototransistor in a small SMD housing with a wide sensitivity angle. The output voltage increases with increasing intensity of the incident light. 
 
-It help you to to detect the light density and reflect the analog voltage signal back to ESP/Arduino controller. You can set the threshold of voltage level to trigger other units on your ESP32 project.
+The operation for this sensor is very similar to a NPN transistor. The 10kOhm shown on the schematics is already present on the breakout board.
+
+It detects the light density and reflect the analog voltage signal back to ESP/Arduino controller. You can set the threshold of voltage level to trigger other units on your ESP32 project.
 
 ## Specs
 
