@@ -1,6 +1,6 @@
 # TEMT6000 (Breakout Board)
 
-TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible light much like the human eye and has peak sensitivity at 570 nm. The breakout board contains a TEMT6000 in the form of a phototransistor in a small SMD housing with a wide sensitivity angle. The output voltage increases with increasing intensity of the incident light. 
+TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible light much like the human eye and has peak sensitivity at 570 nm.  To make taking light measurements as easy as possible, this sensor has been designed into a voltage divider circuit. The breakout board contains a TEMT6000 in the form of a phototransistor in a small SMD housing with a wide sensitivity angle. The output voltage increases with increasing intensity of the incident light. 
 
 The operation for this sensor is very similar to a NPN transistor. The 10kOhm shown on the schematics is already present on the breakout board.
 
