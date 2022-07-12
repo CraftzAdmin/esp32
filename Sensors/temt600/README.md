@@ -1,6 +1,6 @@
 # TEMT6000 (Breakout Board)
 
-TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible light much like the human eye and has peak sensitivity at 570 nm.
+TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible light much like the human eye and has peak sensitivity at 570 nm. The breakout board contains a TEMT6000 in the form of a phototransistor in a small SMD housing with a wide sensitivity angle. The output voltage increases with increasing intensity of the incident light. 
 
 It help you to to detect the light density and reflect the analog voltage signal back to ESP/Arduino controller. You can set the threshold of voltage level to trigger other units on your ESP32 project.
 
@@ -13,7 +13,12 @@ It help you to to detect the light density and reflect the analog voltage signal
 | Output |Analog voltage -  **@VCC=5V** 0 ~ 5V  or **@VCC=3.3V** 0 ~ 3.3V |
 | Datasheet|[TEMT6000 - VISHAY](https://www.vishay.com/docs/81579/temt6000.pdf)|
 | Supply Voltage|DC 3.3V ~ 5.5V|
-| Sensibility | +/-60 degrees|
+| Half sensitivity wide angle ϕ | +/-60° degrees|
+|Current consumption| 20 mA|
+
+## Considerations
+
+This sensor is more adequate for indoors / shades, due to it´s limited range (1 – 1000 Lux). This means that the sensor quickly saturates under a bright light source (ex. Sun - 120,000 lux). This means that any direct high source will quickly achieve max readings. If you plan on using this on a weather station, please consider **BH1750** (1 - 65535 Lux).
 
 ## Sensor Photos
 <img src="https://github.com/CraftzAdmin/esp32/blob/96055247139d4a98f6111b92b2918d85521470b6/Sensors/photos/TEMT600_FRONT.jpg" width="300" height="300"> <img src="https://github.com/CraftzAdmin/esp32/blob/96055247139d4a98f6111b92b2918d85521470b6/Sensors/photos/TEMT6000_back.jpg" width="300" height="300">
