@@ -4,7 +4,7 @@ TEMT6000 is an ambient **ANALOG**  light sensor. It is sensitive to visible ligh
 
 It help you to to detect the light density and reflect the analog voltage signal back to ESP/Arduino controller. You can set the threshold of voltage level to trigger other units on your ESP32 project.
 
-## SPECIFICATION
+## Specs
 
 | TEMT6000       |   Specs     |
 | ------------- |:-------------|
