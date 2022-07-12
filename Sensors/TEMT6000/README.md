@@ -190,7 +190,7 @@ void loop() {
 }
  ```
  ## Fritzing Files
- [TEMT6000 - Fritzing](https://github.com/CraftzAdmin/esp32/blob/6651d76bbaf319e584c2fedc8f2056fe58d56fa9/Sensors/TEMT6000/TEMT6000_Breakout_Board.fzpz)
+ [TEMT6000 - Fritzing Download](https://github.com/CraftzAdmin/esp32/blob/6651d76bbaf319e584c2fedc8f2056fe58d56fa9/Sensors/TEMT6000/TEMT6000_Breakout_Board.fzpz)
  Courtesy off http://omnigatherum.ca/wp/?tag=fritzing
  
  
