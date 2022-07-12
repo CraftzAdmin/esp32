@@ -30,6 +30,10 @@ ESP32 DEVKIT V1 ADC1 Pins -  `GPIO32` `GPIO33` `GPIO34` `GPIO35` `GPIO36` `GPIO3
 | V (VCC) | `3.3V` | 3.3V - If possible use external supply |
 | G (GND) | `GND`| Common GND |
 
+## Required Libraries
+
+No required libraries.
+
 ## Basic Code (ARDUINO IDE)
 
 ```C++ 
@@ -95,18 +99,84 @@ void loop() {
 
   // Output Serial
 
+  // Output Serial
   Serial.print("LUX - ");
   Serial.print(lux);
   Serial.println(" lx");
   Serial.print(VoltPercent);
   Serial.println("%");
+  Serial.print(volts);
+  Serial.println(" volts");
+  Serial.print(amps);
+  Serial.println(" amps");
+  Serial.print(microamps);
+  Serial.println(" microamps");
   delay(1000);
 }
 
 ```
 
+ ## Code Explanation
  
+ 1. we first initiate the program by pointing the ***SIG*** Analog input to the board.
+ 
+ ```C++
+//PIN DEFINITION  - ESP32
+#define TEMT6000 34 //PIN on TEMT6000
+ ```
+2. Then on Setup() we define the pinmode to INPUT, in order to receive the data. Since the breakout board already has all the resistors needed, we don need to make input pullup. Also we define the connection to the serial port for debugging and reading sensor values.
 
+```C++
+void setup()
+{
+  // PIN MODE
+  pinMode(TEMT6000, INPUT);
+  
+  Serial.begin(9600);
+} 
+```
 
+3. ESP32 by default has a 12bit resolution on ADC (readings from 0-4095). For this sensor we set the resolution to 10bit (0-1024) to get the correct readings. All inside Loop ().
 
+```C++
+void loop() {
+ // Light Reading - TEMT6000
+    analogReadResolution(10);
+```
+4. Sensor will give us a reading in voltage, so we will need to convert it to lux. First step s to determine V. We will do that by multiplying the reading by 5 (equivalent to 5V) and dividing by 1024 (max reading if output was 5V). The Volt percent is just anonther variable, not required for the calculation process.
 
+```C++
+ float volts =  analogRead(TEMT6000) * 5 / 1024.0; // Convert reading to VOLTS
+    float VoltPercent = analogRead(TEMT6000) / 1024.0 * 100; //Reading to Percent of Voltage
+ ```
+ 
+5. Finally we will convert the readings to LUX. In the datasheet you will find the relationship between lux and current. From that chart you can calculate the formula. Then you just need to convert the voltage measured to a current measurement. We will use as in the datasheet a series resistor is 10,000 Ohms so the current should be voltage / 10000. The formula is y = 1/2(x) + 0.
+
+    This means that lux = 2 * microamps. In the end we will delay 1000 (1 second) to give enought time for the reading. 
+
+```C++
+ //Conversions from reading to LUX
+    float amps = volts / 10000.0;  // em 10,000 Ohms (Convert to Current)
+    float microamps = amps * 1000000; // Convert to Microamps
+    float lux = microamps * 2.0; // Convert to Lux */
+    delay(1000);
+ ```
+ 6. All info will be output to serial monitor and add a delay for reading.
+ 
+ ```C++
+ // Output Serial
+  Serial.print("LUX - ");
+  Serial.print(lux);
+  Serial.println(" lx");
+  Serial.print(VoltPercent);
+  Serial.println("%");
+  Serial.print(volts);
+  Serial.println(" volts");
+  Serial.print(amps);
+  Serial.println(" amps");
+  Serial.print(microamps);
+  Serial.println(" microamps");
+  delay(1000);
+}
+ ```
+ 
