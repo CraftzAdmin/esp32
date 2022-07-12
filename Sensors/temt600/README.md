@@ -18,7 +18,7 @@ It help you to to detect the light density and reflect the analog voltage signal
 ## Sensor Photos
 <img src="https://github.com/CraftzAdmin/esp32/blob/96055247139d4a98f6111b92b2918d85521470b6/Sensors/photos/TEMT600_FRONT.jpg" width="300" height="300"> <img src="https://github.com/CraftzAdmin/esp32/blob/96055247139d4a98f6111b92b2918d85521470b6/Sensors/photos/TEMT6000_back.jpg" width="300" height="300">
 
-## PINS - ESP32 DEVKIT V1
+## PINS - ESP32 DEVKIT-V1 (30 PIN)
 
 Since the TEMT6000 is an **ANALOG** sensor, select one of the **ADC1** pins on ESP32 DEV Boards. **ADC2** can also be used if your project is not using WIFI. If you´re using more sensors in your project, please consider supplying an external 3.3V line directly. 
 
