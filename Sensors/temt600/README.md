@@ -12,7 +12,7 @@ It help you to to detect the light density and reflect the analog voltage signal
 | llumination Range|1 – 1000 Lux|
 | Output |Analog voltage -  **@VCC=5V** 0 ~ 5V  or **@VCC=3.3V** 0 ~ 3.3V |
 | Datasheet|[TEMT6000 - VISHAY](https://www.vishay.com/docs/81579/temt6000.pdf)|
-| Supply Voltage|DC 3.3 ~ 5.5V|
+| Supply Voltage|DC 3.3V ~ 5.5V|
 | Sensibility | +/-60 degrees|
 
 ## Sensor Photos
